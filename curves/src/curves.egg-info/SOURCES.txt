@@ -1,0 +1,8 @@
+README.rst
+setup.py
+src/curves/__init__.py
+src/curves.egg-info/PKG-INFO
+src/curves.egg-info/SOURCES.txt
+src/curves.egg-info/dependency_links.txt
+src/curves.egg-info/requires.txt
+src/curves.egg-info/top_level.txt
