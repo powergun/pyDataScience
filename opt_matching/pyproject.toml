@@ -6,14 +6,15 @@ authors = ["Wei Ning (DA) <wei.ning@digitalasset.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pandas = "^1.0.3"
 pulp = "^2.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
+[tool.poetry.scripts]
+teammates = "opt_matching.teammates:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
-[tool.poetry.scripts]
-teammates = "opt_matching.teammates:main"
