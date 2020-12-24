@@ -7,6 +7,10 @@ import numpy as np
 from plotly.graph_objs import Scatter, Layout
 import re
 
+# useful articles:
+# https://towardsdatascience.com/how-to-plot-time-series-86b5358197d6
+
+
 def read_all_lines(dirp, ext=".txt"):
     for filename in os.listdir(dirp):
         if not filename.endswith(ext):
@@ -160,5 +164,5 @@ if __name__ == '__main__':
     coll = ProgressCollector()
     for d in diter:
         coll.collect(d)
-    ds = coll.to_panda(wanted=[(r'.*', r'----')])
+    ds = coll.to_panda(wanted=[(r'cxx|py|rust|haskell|scala|go', r'----')])
     plotly.offline.plot({"data": ds, "layout": Layout(title="repo stats, loc: {}".format(coll.loc))})
